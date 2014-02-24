@@ -3,6 +3,8 @@ CS225
 
 My MPs and labs from CS225 at UIUC, posted for anyone to look at. The university doesn't archive previous versions of the class site, so I can't find what exactly each MP is supposed to do. However, most of them are pretty self-explanatory.
 
+Also, many of these were done with a partner.
+
 Why would I post this?
 ======================
 
