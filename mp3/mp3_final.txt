@@ -1,0 +1,224 @@
+Monad Autograder
+Testing mp3 at 2013-02-23 02:59:45
+
+"If you have a procedure with ten parameters, you probably missed some." ~ Alan J. Perlis
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testInsertFront  . . . . . . . . . . [2 pts]  - passed
+testInsertBack . . . . . . . . . . . [2 pts]  - passed
+testDestructor10 (valgrind)  . . . . [3 pts]  - passed
+testDestructor37 (valgrind)  . . . . [3 pts]  - passed
+testReverse20_size . . . . . . . . . [1 pts]  - passed
+testReverse20_forward  . . . . . . . [1 pts]  - passed
+testReverse20_backward . . . . . . . [1 pts]  - FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+testReverse37_size . . . . . . . . . [1 pts]  - passed
+testReverse37_forward  . . . . . . . [1 pts]  - passed
+testReverse37_backward . . . . . . . [1 pts]  - FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+testReverseEmpty (valgrind)  . . . . [1 pts]  - FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+testReverse20_memory (valgrind)  . . [1 pts]  - FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+testReverseNth20_2_size  . . . . . . [1 pts]  - passed
+testReverseNth20_2_forward . . . . . [1 pts]  - passed
+testReverseNth20_2_backward  . . . . [1 pts]  - passed
+testReverseNth37_4_size  . . . . . . [1 pts]  - passed
+testReverseNth37_4_forward . . . . . [1 pts]  - passed
+testReverseNth37_4_backward  . . . . [1 pts]  - passed
+testReverseNth37_37  . . . . . . . . [1 pts]  - passed
+testReverseNth37_4_memory (valgrind) [1 pts]  - passed
+testReverseNthEmpty (valgrind) . . . [1 pts]  - passed
+testWaterfall4_size  . . . . . . . . [1 pts]  - passed
+testWaterfall4_forward . . . . . . . [1 pts]  - passed
+testWaterfall4_backward  . . . . . . [2 pts]  - passed
+testWaterfall7_size  . . . . . . . . [1 pts]  - passed
+testWaterfall7_forward . . . . . . . [1 pts]  - passed
+testWaterfall7_backward  . . . . . . [2 pts]  - passed
+testWaterfall12_size . . . . . . . . [1 pts]  - passed
+testWaterfall12_forward  . . . . . . [1 pts]  - passed
+testWaterfall12_backward . . . . . . [2 pts]  - passed
+testWaterfall7_memory (valgrind) . . [3 pts]  - passed
+testWaterfall7_empty (valgrind)  . . [3 pts]  - FAILED: ==10805==    by 0x40552C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==10805==    by 0x405394: proxy::RunTests::execute_by_mode(
+testSplit5_this_size . . . . . . . . [1 pts]  - passed
+testSplit5_this_forward  . . . . . . [1 pts]  - passed
+testSplit5_this_backward . . . . . . [1 pts]  - passed
+testSplit5_split_size  . . . . . . . [1 pts]  - passed
+testSplit5_split_forward . . . . . . [1 pts]  - passed
+testSplit5_split_backward  . . . . . [1 pts]  - passed
+testSplit5_mem (valgrind)  . . . . . [3 pts]  - passed
+testMerge_size . . . . . . . . . . . [1 pts]  - passed
+testMerge_forward  . . . . . . . . . [1 pts]  - passed
+testMerge_backward . . . . . . . . . [1 pts]  - passed
+testMerge_mem (valgrind) . . . . . . [3 pts]  - passed
+testSort16p_s  . . . . . . . . . . . [1 pts]  - passed
+testSort16p_f  . . . . . . . . . . . [2 pts]  - passed
+testSort16p_b  . . . . . . . . . . . [2 pts]  - passed
+testSort20p_s  . . . . . . . . . . . [1 pts]  - passed
+testSort20p_f  . . . . . . . . . . . [2 pts]  - passed
+testSort20p_b  . . . . . . . . . . . [2 pts]  - passed
+testSort27p_s  . . . . . . . . . . . [1 pts]  - passed
+testSort27p_f  . . . . . . . . . . . [2 pts]  - passed
+testSort27p_b  . . . . . . . . . . . [2 pts]  - passed
+testSortEmpty  . . . . . . . . . . . [5 pts]  - passed
+testSort259p_s . . . . . . . . . . . [1 pts]  - passed
+testSort259p_f . . . . . . . . . . . [2 pts]  - passed
+testSort259p_b . . . . . . . . . . . [2 pts]  - passed
+testSortMemLeak (valgrind) . . . . . [5 pts]  - passed
+testSortNlogN  . . . . . . . . . . . [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 93
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+testReverse20_backward [1 points]
+Result: FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+< 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 >
+
+----------------------------------------------------------------
+testReverse37_backward [1 points]
+Result: FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+< 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 >
+
+----------------------------------------------------------------
+testReverseEmpty (run under valgrind) [1 points]
+Result: FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running testReverseEmpty [worth 1 points, output below]
+< 9 8 7 6 5 4 3 2 1 0 >
+Result: FAILED:
+unit_tests.cpp:117: List does not match solution with backward traversal
+
+----------------------------------------------------------------
+testReverse20_memory (run under valgrind) [1 points]
+Result: FAILED: unit_tests.cpp:117: List does not match solution with backward traversal
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running testReverse20_memory [worth 1 points, output below]
+< 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0 >
+Result: FAILED:
+unit_tests.cpp:117: List does not match solution with backward traversal
+
+----------------------------------------------------------------
+testWaterfall7_empty (run under valgrind) [3 points]
+Result: FAILED: ==10805==    by 0x40552C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==10805==    by 0x405394: proxy::RunTests::execute_by_mode(
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running testWaterfall7_empty [worth 3 points, output below]
+==10807== Invalid read of size 8
+==10807==    at 0x41B91F: List<int>::waterfall() (list.cpp:256)
+==10807==    by 0x418F75: testWaterfallEmpty(check_t, bool) (unit_tests.cpp:368)
+==10807==    by 0x419172: proxy_test::testWaterfall7_empty(util::sizedpipestream<512ul>&) (unit_tests.cpp:387)
+==10807==    by 0x407AE1: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==10807==    by 0x40691B: proxy::test_execution::child_test() (proxy.cpp:549)
+==10807==    by 0x40633A: proxy::test_execution::child() (proxy.cpp:434)
+==10807==    by 0x40953C: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (proxy.cpp:508)
+==10807==    by 0x40679F: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (proxy.cpp:489)
+==10807==    by 0x405624: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (proxy.cpp:250)
+==10807==    by 0x40552C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==10807==    by 0x405394: proxy::RunTests::execute_by_mode() (proxy.cpp:223)
+==10807==    by 0x405345: proxy::RunTests::execute() (proxy.cpp:214)
+==10807==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==10807== 
+==10807== 
+==10807== Process terminating with default action of signal 11 (SIGSEGV)
+==10807==  Access not within mapped region at address 0x0
+==10807==    at 0x41B91F: List<int>::waterfall() (list.cpp:256)
+==10807==    by 0x418F75: testWaterfallEmpty(check_t, bool) (unit_tests.cpp:368)
+==10807==    by 0x419172: proxy_test::testWaterfall7_empty(util::sizedpipestream<512ul>&) (unit_tests.cpp:387)
+==10807==    by 0x407AE1: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==10807==    by 0x40691B: proxy::test_execution::child_test() (proxy.cpp:549)
+==10807==    by 0x40633A: proxy::test_execution::child() (proxy.cpp:434)
+==10807==    by 0x40953C: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (proxy.cpp:508)
+==10807==    by 0x40679F: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (proxy.cpp:489)
+==10807==    by 0x405624: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (proxy.cpp:250)
+==10807==    by 0x40552C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==10807==    by 0x405394: proxy::RunTests::execute_by_mode() (proxy.cpp:223)
+==10807==    by 0x405345: proxy::RunTests::execute() (proxy.cpp:214)
+==10807==  If you believe this happened as a result of a stack
+==10807==  overflow in your program's main thread (unlikely but
+==10807==  possible), you can try to increase the size of the
+==10807==  main thread stack using the --main-stacksize= flag.
+==10807==  The main thread stack size used in this run was 10485760.
+==10805== 31 bytes in 1 blocks are possibly lost in loss record 2 of 11
+==10805==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==10805==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9CDC4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9CF12: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x405075: proxy::add_output_check::add_output_check(char const*, bool (*)(std::string const&, std::string const&)) (proxy.cpp:165)
+==10805==    by 0x4077AD: __static_initialization_and_destruction_0(int, int) (proxy.cpp:31)
+==10805==    by 0x4077EA: global constructors keyed to ___monad_output_check_equals_adder (proxy.cpp:757)
+==10805==    by 0x4240F5: ??? (in /dev/shm/geigle1/grading/monad/mp3_grade/proxy)
+==10805==    by 0x4037BA: ??? (in /dev/shm/geigle1/grading/monad/mp3_grade/proxy)
+==10805== 
+==10805== 33 bytes in 1 blocks are possibly lost in loss record 3 of 11
+==10805==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==10805==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9CDC4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9CF12: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x405075: proxy::add_output_check::add_output_check(char const*, bool (*)(std::string const&, std::string const&)) (proxy.cpp:165)
+==10805==    by 0x4077C1: __static_initialization_and_destruction_0(int, int) (proxy.cpp:37)
+==10805==    by 0x4077EA: global constructors keyed to ___monad_output_check_equals_adder (proxy.cpp:757)
+==10805==    by 0x4240F5: ??? (in /dev/shm/geigle1/grading/monad/mp3_grade/proxy)
+==10805==    by 0x4037BA: ??? (in /dev/shm/geigle1/grading/monad/mp3_grade/proxy)
+==10805== 
+==10805== 37 bytes in 1 blocks are possibly lost in loss record 4 of 11
+==10805==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==10805==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9CDC4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9CF12: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x405075: proxy::add_output_check::add_output_check(char const*, bool (*)(std::string const&, std::string const&)) (proxy.cpp:165)
+==10805==    by 0x4077D5: __static_initialization_and_destruction_0(int, int) (proxy.cpp:43)
+==10805==    by 0x4077EA: global constructors keyed to ___monad_output_check_equals_adder (proxy.cpp:757)
+==10805==    by 0x4240F5: ??? (in /dev/shm/geigle1/grading/monad/mp3_grade/proxy)
+==10805==    by 0x4037BA: ??? (in /dev/shm/geigle1/grading/monad/mp3_grade/proxy)
+==10805== 
+==10805== 39 bytes in 1 blocks are possibly lost in loss record 5 of 11
+==10805==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==10805==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9DD89: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x3A82C9DF4B: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x4093EF: util::sizedpipestream<512ul>::operator>>(std::string&) (pipestream.cpp:198)
+==10805==    by 0x4063E1: proxy::test_execution::parent() (proxy.cpp:448)
+==10805==    by 0x409555: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (proxy.cpp:513)
+==10805==    by 0x40679F: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (proxy.cpp:489)
+==10805==    by 0x405624: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (proxy.cpp:250)
+==10805==    by 0x40552C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==10805==    by 0x405394: proxy::RunTests::execute_by_mode() (proxy.cpp:223)
+==10805==    by 0x405345: proxy::RunTests::execute() (proxy.cpp:214)
+==10805== 
+==10805== 132 bytes in 1 blocks are possibly lost in loss record 10 of 11
+==10805==    at 0x4A05FDE: malloc (vg_replace_malloc.c:236)
+==10805==    by 0x3A82CBB746: __cxa_allocate_exception (in /usr/lib64/libstdc++.so.6.0.13)
+==10805==    by 0x4095DF: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (proxy.cpp:522)
+==10805==    by 0x40679F: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (proxy.cpp:489)
+==10805==    by 0x405624: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (proxy.cpp:250)
+==10805==    by 0x40552C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==10805==    by 0x405394: proxy::RunTests::execute_by_mode()
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 93
+

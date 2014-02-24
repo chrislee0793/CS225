@@ -1,0 +1,43 @@
+Monad Autograder
+Testing mp6 at 2013-04-12 17:14:29
+
+"The primary purpose of the DATA statement is to give names to constants; instead of referring to pi as 3.141592653589793 at every appearance, the variable PI can be given that value with a DATA statement and used instead of the longer form of the constant. This also simplifies modifying the program, should the value of pi change." ~ FORTRAN manual for Xerox computers
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testSmallerDimVal . . . . . [3 pts]  - passed
+testShouldReplace . . . . . [3 pts]  - passed
+testLinearCtor_1_10 . . . . [4 pts]  - passed
+testLinearCtor_3_31 . . . . [4 pts]  - passed
+testLinearCtor_2_14 . . . . [4 pts]  - passed
+testLinearNNS_1_10  . . . . [4 pts]  - passed
+testLinearNNS_3_31  . . . . [4 pts]  - passed
+testLinearNNS_2_14  . . . . [4 pts]  - passed
+testDeceptiveNNOneLevelCtor [4 pts]  - FAILED
+testDeceptiveNNOneLevelNNS  [3 pts]  - passed
+testMinesCtor . . . . . . . [3 pts]  - FAILED
+testMinesNNS  . . . . . . . [4 pts]  - passed
+testDeceptiveMinesCtor  . . [3 pts]  - FAILED
+testDeceptiveMinesNNS . . . [5 pts]  - FAILED
+testTieBreakingCtor . . . . [3 pts]  - FAILED
+testTieBreakingNNS  . . . . [3 pts]  - passed
+testLeftRecurseCtor . . . . [3 pts]  - passed
+testLeftRecurseNNS  . . . . [3 pts]  - passed
+testRandom1Ctor . . . . . . [3 pts]  - FAILED
+testRandom1NNS  . . . . . . [3 pts]  - passed
+testRandom2Ctor . . . . . . [3 pts]  - FAILED
+testRandom2NNS  . . . . . . [3 pts]  - passed
+testCheckeredMosaic . . . . [12 pts] - FAILED
+testPrimaryColorMosaic  . . [6 pts]  - FAILED
+testRandomMosaic  . . . . . [6 pts]  - FAILED
+
+
+Total score...
+================================================================
+TOTAL SCORE: 52
+

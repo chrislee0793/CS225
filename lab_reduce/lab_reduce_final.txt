@@ -1,0 +1,23 @@
+Monad Autograder
+Testing lab_reduce at 2013-04-08 07:47:51
+
+"Anything that can go wrong will go wrong." ~ Murphy's Law
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+findmin_minimum_correctness . . . . [20 pts] - passed
+findmin_minimum_parallel_concurrent [15 pts] - passed
+num_selected_correctness  . . . . . [15 pts] - passed
+num_selected_concurrency  . . . . . [10 pts] - passed
+frequency_parallel_correctness  . . [40 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

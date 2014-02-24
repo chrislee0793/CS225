@@ -1,0 +1,21 @@
+Monad Autograder
+Testing mp2.1 at 2013-01-30 14:25:04
+
+"Don't beg. Earn it. Then it will be granted to you." ~ Adroc Thurston
+
+Setting up test environment...
+Compiling...
+================================================================
+make: *** No rule to make target `scene.cpp', needed by `scene.o'.  Stop.
+
+
+exec("./proxy", "--nodetailed") failed: No such file or directory
+Running tests...
+================================================================
+Could not execute test cases
+
+
+Total score...
+================================================================
+TOTAL SCORE: 0
+

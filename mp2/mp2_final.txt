@@ -1,0 +1,287 @@
+Monad Autograder
+Testing mp2 at 2013-02-06 01:14:07
+
+"Computer Science is no more about computers than astronomy is about telescopes." ~ E. Dijkstra
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+InvertColorsEven . . . . . . . . . . . [8 pts] - passed
+FlipLeftEven . . . . . . . . . . . . . [5 pts] - passed
+FlipLeftOdd  . . . . . . . . . . . . . [5 pts] - passed
+AdjustBrightnessEven . . . . . . . . . [6 pts] - passed
+AdjustBrightnessEven2  . . . . . . . . [3 pts] - passed
+AdjustBrightnessEven3  . . . . . . . . [3 pts] - passed
+Valgrind1 (valgrind) . . . . . . . . . [5 pts] - passed
+AddPictureValidIndex . . . . . . . . . [3 pts] - passed
+AddPictureInvalidIndex . . . . . . . . [2 pts] - passed
+ImageAssignmentOperator  . . . . . . . [2 pts] - passed
+SceneGetPictureInvalidIndex  . . . . . [2 pts] - FAILED: testscene.cpp:293: Assertion (NULL == image) failed
+SceneChangeMaxLayersLarger . . . . . . [3 pts] - FAILED: Segmentation fault
+SceneChangeMaxLayersSmaller (valgrind) [1 pts] - FAILED: ==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: p
+SceneChangeMaxLayersInvalidChange  . . [2 pts] - FAILED: Segmentation fault
+SceneCopyCtor  . . . . . . . . . . . . [3 pts] - passed
+SceneCopyCtor2 . . . . . . . . . . . . [2 pts] - passed
+SceneAssignmentOperator  . . . . . . . [3 pts] - passed
+SceneAssignmentOperator2 . . . . . . . [2 pts] - passed
+SceneChangeLayer . . . . . . . . . . . [3 pts] - passed
+SceneChangeLayerInvalid  . . . . . . . [2 pts] - passed
+SceneDrawScene . . . . . . . . . . . . [3 pts] - passed
+SceneDrawScene2  . . . . . . . . . . . [3 pts] - passed
+SceneDrawScene3  . . . . . . . . . . . [3 pts] - passed
+SceneDrawScene4  . . . . . . . . . . . [3 pts] - passed
+SceneDrawSceneChangeLayer  . . . . . . [2 pts] - passed
+SceneDrawSceneDeletePicture  . . . . . [2 pts] - passed
+SceneDrawSceneTranslate  . . . . . . . [2 pts] - passed
+SceneDrawSceneTranslate2 . . . . . . . [2 pts] - passed
+SceneTranslateInvalid  . . . . . . . . [2 pts] - passed
+SceneTranslateInvalid2 . . . . . . . . [1 pts] - passed
+SceneDeletePictureInvalid  . . . . . . [2 pts] - passed
+Valgrind2 (valgrind) . . . . . . . . . [5 pts] - passed
+Valgrind3 (valgrind) . . . . . . . . . [5 pts] - FAILED: ==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_te
+
+
+Total score...
+================================================================
+TOTAL SCORE: 87
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+SceneGetPictureInvalidIndex [2 points]
+Result: FAILED: testscene.cpp:293: Assertion (NULL == image) failed
+Took 0ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+SceneChangeMaxLayersLarger [3 points]
+Result: FAILED: Segmentation fault
+Took 38004400ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+SceneChangeMaxLayersSmaller (run under valgrind) [1 points]
+Result: FAILED: ==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: p
+Took unknown time (2000ms timeout)
+Output:
+----------------------------------------------------------------
+Running SceneChangeMaxLayersSmaller [worth 1 points, output below]
+==31915== Invalid read of size 8
+==31915==    at 0x404460: PNG::_clear() (png.cpp:25)
+==31915==    by 0x404C51: PNG::operator=(PNG const&) (png.cpp:151)
+==31915==    by 0x40624E: Image::operator=(Image const&) (image.cpp:8)
+==31915==    by 0x41FB6C: Scene::changemaxlayers(int) (scene.cpp:57)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31915==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31915==  Address 0x4c83a00 is 8 bytes after a block of size 24 alloc'd
+==31915==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==31915==    by 0x41FA63: Scene::changemaxlayers(int) (scene.cpp:50)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31915==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31915==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31915==    by 0x40CCBB: proxy::RunTests::execute() (testscene.cpp:969)
+==31915== 
+==31915== Invalid write of size 8
+==31915==    at 0x40447D: PNG::_clear() (png.cpp:26)
+==31915==    by 0x404C51: PNG::operator=(PNG const&) (png.cpp:151)
+==31915==    by 0x40624E: Image::operator=(Image const&) (image.cpp:8)
+==31915==    by 0x41FB6C: Scene::changemaxlayers(int) (scene.cpp:57)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31915==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31915==  Address 0x4c83a00 is 8 bytes after a block of size 24 alloc'd
+==31915==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==31915==    by 0x41FA63: Scene::changemaxlayers(int) (scene.cpp:50)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31915==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31915==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31915==    by 0x40CCBB: proxy::RunTests::execute() (testscene.cpp:969)
+==31915== 
+==31915== Invalid write of size 4
+==31915==    at 0x4044A7: PNG::_copy(PNG const&) (png.cpp:31)
+==31915==    by 0x404C64: PNG::operator=(PNG const&) (png.cpp:152)
+==31915==    by 0x40624E: Image::operator=(Image const&) (image.cpp:8)
+==31915==    by 0x41FB6C: Scene::changemaxlayers(int) (scene.cpp:57)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31915==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31915==  Address 0x4c839f8 is 0 bytes after a block of size 24 alloc'd
+==31915==    at 0x4A0674C: operator new[](unsigned long) (vg_replace_malloc.c:305)
+==31915==    by 0x41FA63: Scene::changemaxlayers(int) (scene.cpp:50)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31915==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31915==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31915==    by 0x40CCBB: proxy::RunTests::execute() (testscene.cpp:969)
+==31915== 
+==31915== Invalid write of size 4
+==31915==    at 0x4044B4: PNG::_copy(PNG const&) (png.cpp:32)
+==31915==    by 0x404C64: PNG::operator=(PNG const&) (png.cpp:152)
+==31915==    by 0x40624E: Image::operator=(Image const&) (image.cpp:8)
+==31915==    by 0x41FB6C: Scene::changemaxlayers(int) (scene.cpp:57)
+==31915==    by 0x408393: proxy_test::SceneChangeMaxLayersSmaller(util::sizedpipestream<512ul>&) (testscene.cpp:316)
+==31915==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31915==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31915==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31915==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31915==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31915==    by 0x40CF9A: pr
+
+----------------------------------------------------------------
+SceneChangeMaxLayersInvalidChange [2 points]
+Result: FAILED: Segmentation fault
+Took 137095356088331ms (2000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+Valgrind3 (run under valgrind) [5 points]
+Result: FAILED: ==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_te
+Took unknown time (10000ms timeout)
+Output:
+----------------------------------------------------------------
+Running Valgrind3 [worth 5 points, output below]
+==31947== Invalid read of size 8
+==31947==    at 0x404460: PNG::_clear() (png.cpp:25)
+==31947==    by 0x404E6D: PNG::readFromFile(std::string const&) (png.cpp:195)
+==31947==    by 0x41FE16: Scene::addpicture(char const*, int, int, int) (scene.cpp:92)
+==31947==    by 0x40AF7A: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:585)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31947==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31947==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31947==  Address 0x4ca8260 is 64 bytes inside a block of size 88 free'd
+==31947==    at 0x4A04E5D: operator delete[](void*) (vg_replace_malloc.c:409)
+==31947==    by 0x41FD4D: Scene::changemaxlayers(int) (scene.cpp:81)
+==31947==    by 0x40AF56: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:584)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31947==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31947==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31947==    by 0x40CCBB: proxy::RunTests::execute() (testscene.cpp:969)
+==31947== 
+==31947== Invalid write of size 8
+==31947==    at 0x40447D: PNG::_clear() (png.cpp:26)
+==31947==    by 0x404E6D: PNG::readFromFile(std::string const&) (png.cpp:195)
+==31947==    by 0x41FE16: Scene::addpicture(char const*, int, int, int) (scene.cpp:92)
+==31947==    by 0x40AF7A: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:585)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31947==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31947==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31947==  Address 0x4ca8260 is 64 bytes inside a block of size 88 free'd
+==31947==    at 0x4A04E5D: operator delete[](void*) (vg_replace_malloc.c:409)
+==31947==    by 0x41FD4D: Scene::changemaxlayers(int) (scene.cpp:81)
+==31947==    by 0x40AF56: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:584)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31947==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31947==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31947==    by 0x40CCBB: proxy::RunTests::execute() (testscene.cpp:969)
+==31947== 
+==31947== Invalid write of size 4
+==31947==    at 0x405451: PNG::_read_file(std::string const&) (png.cpp:282)
+==31947==    by 0x404E80: PNG::readFromFile(std::string const&) (png.cpp:196)
+==31947==    by 0x41FE16: Scene::addpicture(char const*, int, int, int) (scene.cpp:92)
+==31947==    by 0x40AF7A: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:585)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31947==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31947==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31947==  Address 0x4ca8258 is 56 bytes inside a block of size 88 free'd
+==31947==    at 0x4A04E5D: operator delete[](void*) (vg_replace_malloc.c:409)
+==31947==    by 0x41FD4D: Scene::changemaxlayers(int) (scene.cpp:81)
+==31947==    by 0x40AF56: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:584)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (testscene.cpp:1005)
+==31947==    by 0x40CEA2: proxy::RunTests::run_single_test(char const*) (testscene.cpp:993)
+==31947==    by 0x40CD0A: proxy::RunTests::execute_by_mode() (testscene.cpp:978)
+==31947==    by 0x40CCBB: proxy::RunTests::execute() (testscene.cpp:969)
+==31947== 
+==31947== Invalid write of size 4
+==31947==    at 0x405475: PNG::_read_file(std::string const&) (png.cpp:283)
+==31947==    by 0x404E80: PNG::readFromFile(std::string const&) (png.cpp:196)
+==31947==    by 0x41FE16: Scene::addpicture(char const*, int, int, int) (scene.cpp:92)
+==31947==    by 0x40AF7A: proxy_test::Valgrind3(util::sizedpipestream<512ul>&) (testscene.cpp:585)
+==31947==    by 0x414C2D: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==31947==    by 0x40E291: proxy::test_execution::child_test() (testscene.cpp:1304)
+==31947==    by 0x40DCB0: proxy::test_execution::child() (testscene.cpp:1189)
+==31947==    by 0x416BD0: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (testscene.cpp:1263)
+==31947==    by 0x40E115: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (testscene.cpp:1244)
+==31947==    by 0x40CF9A: proxy::RunTests::run_single_test(monad_shared::unit_tes
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 87
+

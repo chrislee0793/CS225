@@ -1,0 +1,266 @@
+Monad Autograder
+Testing mp5 at 2013-03-30 03:39:54
+
+"Eighty percent of success is showing up." ~ Woody Allen
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_default_ctor  . . . . . . [1 pts] - passed
+test_ctor_1  . . . . . . . . . [1 pts] - passed
+test_ctor_2  . . . . . . . . . [2 pts] - passed
+test_buildTree_1 . . . . . . . [2 pts] - passed
+test_buildTree_2 . . . . . . . [1 pts] - passed
+test_buildTree_3 . . . . . . . [2 pts] - passed
+test_cctor_1 . . . . . . . . . [1 pts] - FAILED: Segmentation fault
+test_cctor_2 . . . . . . . . . [1 pts] - FAILED: Segmentation fault
+test_cctor_3 . . . . . . . . . [1 pts] - passed
+test_cctor_4 . . . . . . . . . [1 pts] - passed
+test_assign_op_1 . . . . . . . [1 pts] - FAILED: Segmentation fault
+test_assign_op_2 . . . . . . . [1 pts] - FAILED: Segmentation fault
+test_assign_op_3 . . . . . . . [1 pts] - passed
+test_assign_op_4 . . . . . . . [1 pts] - passed
+test_getPixel_1  . . . . . . . [1 pts] - FAILED: Segmentation fault
+test_getPixel_2  . . . . . . . [2 pts] - passed
+test_getPixel_3  . . . . . . . [2 pts] - passed
+test_getPixel_4  . . . . . . . [2 pts] - passed
+test_decompress_unpruned_1 . . [1 pts] - FAILED: Segmentation fault
+test_decompress_unpruned_2 . . [1 pts] - passed
+test_decompress_unpruned_3 . . [1 pts] - passed
+test_decompress_unpruned_4 . . [1 pts] - passed
+time_getPixel_logn . . . . . . [4 pts] - FAILED: Segmentation fault
+time_decompress_n (valgrind) . [4 pts] - FAILED: Segmentation fault
+valgrind_big3 (valgrind) . . . [4 pts] - FAILED: Directly lost memory leaks
+test_clockwiseRotate_1 . . . . [1 pts] - FAILED: Segmentation fault
+test_clockwiseRotate_2 . . . . [1 pts] - passed
+test_clockwiseRotate_3 . . . . [2 pts] - passed
+test_clockwiseRotate_4 . . . . [2 pts] - passed
+test_prune_1 . . . . . . . . . [2 pts] - FAILED: Segmentation fault
+test_prune_2 . . . . . . . . . [3 pts] - passed
+test_prune_3 . . . . . . . . . [2 pts] - passed
+test_prune_4 . . . . . . . . . [5 pts] - passed
+test_prune_copy  . . . . . . . [2 pts] - passed
+test_prune_rotate  . . . . . . [2 pts] - passed
+test_prune_getPixel  . . . . . [3 pts] - passed
+test_pruneSize_1 . . . . . . . [2 pts] - FAILED: Segmentation fault
+test_pruneSize_2 . . . . . . . [2 pts] - passed
+test_pruneSize_3 . . . . . . . [2 pts] - passed
+test_pruneSize_4 . . . . . . . [2 pts] - passed
+test_pruneSize_5 . . . . . . . [2 pts] - passed
+test_idealPrune_1  . . . . . . [2 pts] - FAILED: Segmentation fault
+test_idealPrune_2  . . . . . . [3 pts] - FAILED: Segmentation fault
+test_idealPrune_3  . . . . . . [2 pts] - FAILED: Timed out (1000ms)
+test_idealPrune_4  . . . . . . [5 pts] - passed
+val_clockwiseRotate (valgrind) [2 pts] - passed
+val_prune (valgrind) . . . . . [4 pts] - passed
+val_idealPrune (valgrind)  . . [3 pts] - passed
+test_const_correctness . . . . [4 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 70
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+test_cctor_1 [1 points]
+Result: FAILED: Segmentation fault
+Took 29167920ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_cctor_2 [1 points]
+Result: FAILED: Segmentation fault
+Took 138229227454475ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_assign_op_1 [1 points]
+Result: FAILED: Segmentation fault
+Took 138242112356363ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_assign_op_2 [1 points]
+Result: FAILED: Segmentation fault
+Took 138246407323659ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_getPixel_1 [1 points]
+Result: FAILED: Segmentation fault
+Took 138259292225547ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_decompress_unpruned_1 [1 points]
+Result: FAILED: Segmentation fault
+Took 138276472094731ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+time_getPixel_logn [4 points]
+Result: FAILED: Segmentation fault
+Took 138293651963915ms (60000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+time_decompress_n (run under valgrind) [4 points]
+Result: FAILED: Segmentation fault
+Took unknown time (120000ms timeout)
+Output:
+----------------------------------------------------------------
+Running time_decompress_n [worth 4 points, output below]
+==32206== Stack overflow in thread 1: can't grow stack to 0x7fe601fe0
+==32206== 
+==32206== Process terminating with default action of signal 11 (SIGSEGV)
+==32206==  Access not within mapped region at address 0x7FE601FE0
+==32206==    at 0x4A06C4E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==32206==  If you believe this happened as a result of a stack
+==32206==  overflow in your program's main thread (unlikely but
+==32206==  possible), you can try to increase the size of the
+==32206==  main thread stack using the --main-stacksize= flag.
+==32206==  The main thread stack size used in this run was 10485760.
+==32206== Stack overflow in thread 1: can't grow stack to 0x7fe601fd8
+==32206== 
+==32206== Process terminating with default action of signal 11 (SIGSEGV)
+==32206==  Access not within mapped region at address 0x7FE601FD8
+==32206==    at 0x4801650: _vgnU_freeres (vg_preloaded.c:58)
+==32206==  If you believe this happened as a result of a stack
+==32206==  overflow in your program's main thread (unlikely but
+==32206==  possible), you can try to increase the size of the
+==32206==  main thread stack using the --main-stacksize= flag.
+==32206==  The main thread stack size used in this run was 10485760.
+==32205== 31 bytes in 1 blocks are possibly lost in loss record 2 of 10
+==32205==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==32205==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x3A82C9CDC4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x3A82C9CF12: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x4050D5: proxy::add_output_check::add_output_check(char const*, bool (*)(std::string const&, std::string const&)) (proxy.cpp:165)
+==32205==    by 0x40780D: __static_initialization_and_destruction_0(int, int) (proxy.cpp:31)
+==32205==    by 0x40784A: global constructors keyed to ___monad_output_check_equals_adder (proxy.cpp:757)
+==32205==    by 0x4270E5: ??? (in /dev/shm/geigle1/grading/monad/mp5_grade/proxy)
+==32205==    by 0x403802: ??? (in /dev/shm/geigle1/grading/monad/mp5_grade/proxy)
+==32205== 
+==32205== 33 bytes in 1 blocks are possibly lost in loss record 3 of 10
+==32205==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==32205==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x3A82C9CDC4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x3A82C9CF12: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x4050D5: proxy::add_output_check::add_output_check(char const*, bool (*)(std::string const&, std::string const&)) (proxy.cpp:165)
+==32205==    by 0x407821: __static_initialization_and_destruction_0(int, int) (proxy.cpp:37)
+==32205==    by 0x40784A: global constructors keyed to ___monad_output_check_equals_adder (proxy.cpp:757)
+==32205==    by 0x4270E5: ??? (in /dev/shm/geigle1/grading/monad/mp5_grade/proxy)
+==32205==    by 0x403802: ??? (in /dev/shm/geigle1/grading/monad/mp5_grade/proxy)
+==32205== 
+==32205== 37 bytes in 1 blocks are possibly lost in loss record 4 of 10
+==32205==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==32205==    by 0x3A82C9C3A8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x3A82C9CDC4: ??? (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x3A82C9CF12: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x4050D5: proxy::add_output_check::add_output_check(char const*, bool (*)(std::string const&, std::string const&)) (proxy.cpp:165)
+==32205==    by 0x407835: __static_initialization_and_destruction_0(int, int) (proxy.cpp:43)
+==32205==    by 0x40784A: global constructors keyed to ___monad_output_check_equals_adder (proxy.cpp:757)
+==32205==    by 0x4270E5: ??? (in /dev/shm/geigle1/grading/monad/mp5_grade/proxy)
+==32205==    by 0x403802: ??? (in /dev/shm/geigle1/grading/monad/mp5_grade/proxy)
+==32205== 
+==32205== 132 bytes in 1 blocks are possibly lost in loss record 9 of 10
+==32205==    at 0x4A05FDE: malloc (vg_replace_malloc.c:236)
+==32205==    by 0x3A82CBB746: __cxa_allocate_exception (in /usr/lib64/libstdc++.so.6.0.13)
+==32205==    by 0x40963F: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (proxy.cpp:522)
+==32205==    by 0x4067FF: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (proxy.cpp:489)
+==32205==    by 0x405684: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (proxy.cpp:250)
+==32205==    by 0x40558C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==32205==    by 0x4053F4: proxy::RunTests::execute_by_mode() (proxy.cpp:223)
+==32205==    by 0x4053A5: proxy::RunTests::execute() (proxy.cpp:214)
+==32205==    by 0x404B40: main (proxy.cpp:104)
+==32205== 
+Result: FAILED:
+Segmentation fault
+
+----------------------------------------------------------------
+valgrind_big3 (run under valgrind) [4 points]
+Result: FAILED: Directly lost memory leaks
+Took unknown time (120000ms timeout)
+Output:
+----------------------------------------------------------------
+Running valgrind_big3 [worth 4 points, output below]
+==32217== 16,368 (48 direct, 16,320 indirect) bytes in 1 blocks are definitely lost in loss record 341 of 341
+==32217==    at 0x4A06C8E: operator new(unsigned long) (vg_replace_malloc.c:261)
+==32217==    by 0x4246FA: Quadtree::_copy(Quadtree const&) (quadtree.cpp:339)
+==32217==    by 0x4230D2: Quadtree::Quadtree(Quadtree const&) (quadtree.cpp:29)
+==32217==    by 0x41BC04: proxy_test::valgrind_big3(util::sizedpipestream<512ul>&) (unit_tests.cpp:307)
+==32217==    by 0x407B41: monad_shared::unit_test_input::execute(util::sizedpipestream<512ul>&) const (monad_shared.h:72)
+==32217==    by 0x40697B: proxy::test_execution::child_test() (proxy.cpp:549)
+==32217==    by 0x40639A: proxy::test_execution::child() (proxy.cpp:434)
+==32217==    by 0x40959C: int proxy::fork_execute<proxy::test_execution>(proxy::test_execution&) (proxy.cpp:508)
+==32217==    by 0x4067FF: proxy::RunTests::execute_test(monad_shared::unit_test_input const&, bool) (proxy.cpp:489)
+==32217==    by 0x405684: proxy::RunTests::run_single_test(monad_shared::unit_test_input const&) (proxy.cpp:250)
+==32217==    by 0x40558C: proxy::RunTests::run_single_test(char const*) (proxy.cpp:238)
+==32217==    by 0x4053F4: proxy::RunTests::execute_by_mode() (proxy.cpp:223)
+==32217== 
+Result: FAILED:
+Directly lost memory leaks
+
+----------------------------------------------------------------
+test_clockwiseRotate_1 [1 points]
+Result: FAILED: Segmentation fault
+Took 138529875165195ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_prune_1 [2 points]
+Result: FAILED: Segmentation fault
+Took 139144055488523ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_pruneSize_1 [2 points]
+Result: FAILED: Segmentation fault
+Took 139204185030667ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_idealPrune_1 [2 points]
+Result: FAILED: Segmentation fault
+Took 139225659867147ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_idealPrune_2 [3 points]
+Result: FAILED: Segmentation fault
+Took 139229954834443ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+test_idealPrune_3 [2 points]
+Result: FAILED: Timed out (1000ms)
+Took 1000ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 70
+

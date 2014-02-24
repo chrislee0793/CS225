@@ -1,0 +1,25 @@
+Monad Autograder
+Testing mp7.1 at 2013-04-20 00:46:47
+
+"Even if by chance this world should end tomorrow, if it's together with you, would 'I'm okay with that too' be the cool attitude you'd take?" ~ Makino Yui
+
+Setting up test environment...
+cp: cannot stat `/dev/shm/geigle1/grading/monad/sp13-cs225/smwalto2/mp7/maze.h': No such file or directory
+cp: cannot stat `/dev/shm/geigle1/grading/monad/sp13-cs225/smwalto2/mp7/maze.cpp': No such file or directory
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+addElements1 . . . . [20 pts] - passed
+addElements2 . . . . [20 pts] - passed
+testFindAndSetUnion1 [20 pts] - passed
+testFindAndSetUnion2 [20 pts] - passed
+testFindAndSetUnion3 [20 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

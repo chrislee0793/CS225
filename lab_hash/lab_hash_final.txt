@@ -1,0 +1,47 @@
+Monad Autograder
+Testing lab_hash at 2013-04-15 01:03:36
+
+"I've seen many balls. Actually, let's do an example without balls." ~ Jack Toole
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+testRemoveEASY . [6 pts]  - passed
+testRemoveHard . [10 pts] - passed
+testResizeOnce . [7 pts]  - passed
+testResizeAll  . [11 pts] - FAILED: unit_tests.cpp:98: Assertion (hashTable.tableSize() >= strings.size() / 0.7) failed
+testInsertEasy . [6 pts]  - passed
+testInsertHard . [10 pts] - passed
+testAnagramsSC . [8 pts]  - passed
+testAnagramsLP . [8 pts]  - passed
+testWordCountSC  [8 pts]  - passed
+testWordCountLP  [8 pts]  - passed
+testLogfileParse [18 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 89
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+testResizeAll [11 points]
+Result: FAILED: unit_tests.cpp:98: Assertion (hashTable.tableSize() >= strings.size() / 0.7) failed
+Took 0ms (5000ms timeout)
+Output:
+----------------------------------------------------------------
+26
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 89
+

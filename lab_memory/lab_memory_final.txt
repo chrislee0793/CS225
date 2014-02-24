@@ -1,0 +1,23 @@
+Monad Autograder
+Testing lab_memory at 2013-02-04 21:32:02
+
+"A computer lets you make more mistakes faster than any invention in human history–with the possible exceptions of handguns and tequila." ~ Mitch Radcliffe
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_constructor (valgrind) [5 pts]  - passed
+test_allocate (valgrind)  . [5 pts]  - passed
+test_printrooms (valgrind)  [20 pts] - passed
+test_any_output . . . . . . [30 pts] - passed
+test_correct_output . . . . [40 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+

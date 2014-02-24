@@ -1,0 +1,26 @@
+Monad Autograder
+Testing lab_avl at 2013-04-01 01:01:34
+
+"The cheapest, fastest, and most reliable components of a computer system are those that aren't there." ~ Gordon Bell
+
+Setting up test environment...
+Compiling...
+================================================================
+
+
+Running tests...
+================================================================
+test_oneElement  . . . . [10 pts] - passed
+test_simpleRotateLeft  . [10 pts] - passed
+test_simpleRotateRight . [10 pts] - passed
+test_threeLeftRotates  . [10 pts] - passed
+test_threeRightRotates . [10 pts] - passed
+test_manyRotations . . . [20 pts] - passed
+test_manyInserts . . . . [20 pts] - passed
+test_valgrind (valgrind) [10 pts] - passed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 100
+
